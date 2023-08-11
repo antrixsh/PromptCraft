@@ -1,10 +1,10 @@
 {
     "gpt-3": {
-        "api_key": "your_api_key_here",
+        "api_key": "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",
         "prompt_format": "User: {0}\nAI:"
     },
     "gpt-4": {
-        "api_key": "your_api_key_here",
+        "api_key": "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",
         "prompt_format": "Input: {0}\nOutput:"
     }
 }

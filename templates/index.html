@@ -2,17 +2,83 @@
 <html>
 <head>
     <title>PromptCraft Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 18px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            margin-top: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            white-space: pre-wrap;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 10px;
+            border-top: 1px solid #ccc;
+        }
+    </style>
 </head>
 <body>
-    <h1>PromptCraft Web Interface</h1>
-    <form method="POST">
-        <label for="user_input">Enter your question or prompt:</label><br>
-        <textarea id="user_input" name="user_input" rows="4" cols="50" required></textarea><br>
-        <input type="submit" value="Generate Prompt">
-    </form>
-    {% if user_input %}
-    <h2>Generated Prompt:</h2>
-    <pre>{{ generated_prompt }}</pre>
-    {% endif %}
+    <div class="container">
+        <h1>PromptCraft Web Interface</h1>
+        <form method="POST">
+            <label for="user_input">Enter your question or prompt:</label><br>
+            <textarea id="user_input" name="user_input" rows="4" cols="50" required></textarea><br>
+            <input type="submit" value="Generate Prompt">
+        </form>
+        {% if user_input %}
+        <h2>Generated Prompt:</h2>
+        <pre>{{ generated_prompt }}</pre>
+        {% endif %}
+    </div>
+    <div class="footer">
+        <p>Generated on: {{ current_date_time }}</p>
+        <p>System: {{ system_name }}</p>
+        <p>This is an open-source project. Contact: antrixsh@gmail.com</p>
+        <p>Project built by Antrixsh Gupta</p>
+    </div>
 </body>
 </html>
