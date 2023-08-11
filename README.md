@@ -3,9 +3,9 @@ Crafting OpenAI Prompts from Human Language
 
 PromptCraft: Convert Human English Language into OpenAI Prompts
 
-##Welcome to PromptCraft, a Python-based open-source tool that enables seamless conversion of human-written English language into prompts suitable for OpenAI models. With PromptCraft, you can effortlessly bridge the gap between human communication and machine-generated responses using the power of OpenAI's language models.
+## Welcome to PromptCraft, a Python-based open-source tool that enables seamless conversion of human-written English language into prompts suitable for OpenAI models. With PromptCraft, you can effortlessly bridge the gap between human communication and machine-generated responses using the power of OpenAI's language models.
 
-###Key Features
+### Key Features
 
     - User-Friendly Interface: PromptCraft offers a user-friendly interface that allows users to input questions, statements, or prompts in plain English, which are then transformed into suitable prompts for OpenAI models.
 
@@ -15,19 +15,19 @@ PromptCraft: Convert Human English Language into OpenAI Prompts
 
     - Open Source: PromptCraft is open-source and actively maintained by a community of developers. Feel free to contribute, suggest improvements, and customize the tool according to your requirements.
 
-###Installation
+### Installation
 
 To get started with PromptCraft, follow these steps:
 
     Clone the repository:
     git clone https://github.com/yourusername/promptcraft.git
 cd promptcraft
-###Install the required dependencies:
+### Install the required dependencies:
 pip install -r requirements.txt
 
-###Run the tool:
+### Run the tool:
 python promptcraft.py
-##Usage
+## Usage
 
     - Launch the PromptCraft tool by executing python promptcraft.py in your terminal.
 
@@ -51,10 +51,10 @@ We welcome contributions from the community to make PromptCraft even better. If 
 
     - Submit a pull request, explaining your changes and their benefits.
 
-###License
+### License
 
 PromptCraft is released under the MIT License.
-###Contact
+### Contact
 
 If you have any questions, suggestions, or feedback, feel free to reach out to us at antrixsh@gmail.com or open an issue on the GitHub repository.
 
