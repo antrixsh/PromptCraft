@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PromptCraft Web</title>
+</head>
+<body>
+    <h1>PromptCraft Web Interface</h1>
+    <form method="POST">
+        <label for="user_input">Enter your question or prompt:</label><br>
+        <textarea id="user_input" name="user_input" rows="4" cols="50" required></textarea><br>
+        <input type="submit" value="Generate Prompt">
+    </form>
+    {% if user_input %}
+    <h2>Generated Prompt:</h2>
+    <pre>{{ generated_prompt }}</pre>
+    {% endif %}
+</body>
+</html>
