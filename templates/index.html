@@ -60,6 +60,37 @@
             border-top: 1px solid #ccc;
         }
     </style>
+    <script>
+        // Function to populate the model selection dropdown
+        function populateModelOptions() {
+            // Load the model config from a JSON file
+            fetch('/get_model_config')
+                .then(response => response.json())
+                .then(data => {
+                    const modelConfig = data;
+                    const modelSelect = document.getElementById('model_select');
+
+                    // Clear existing options
+                    modelSelect.innerHTML = '';
+
+                    // Populate options from the model config
+                    for (const modelName in modelConfig) {
+                        if (modelConfig.hasOwnProperty(modelName)) {
+                            const option = document.createElement('option');
+                            option.value = modelName;
+                            option.text = modelName;
+                            modelSelect.appendChild(option);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching model config:', error);
+                });
+        }
+
+        // Call the function to populate options when the page loads
+        window.onload = populateModelOptions;
+    </script>
 </head>
 <body>
     <div class="container">
@@ -67,6 +98,9 @@
         <form method="POST">
             <label for="user_input">Enter your question or prompt:</label><br>
             <textarea id="user_input" name="user_input" rows="4" cols="50" required></textarea><br>
+            <!-- The model selection dropdown menu -->
+            <label for="model_select">Select a model:</label>
+            <select id="model_select" name="model_select"></select><br>
             <input type="submit" value="Generate Prompt">
         </form>
         {% if user_input %}
